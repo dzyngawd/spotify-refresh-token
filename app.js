@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = '801611958853477090a91b78836c4999'; // Your client id
 var client_secret = 'edefcc1cf4e24a1caa911374cf462750'; // Your client secret
-var redirect_uri = 'http://localhost:8888/callback';
+var redirect_uri = 'https://spotify-refresh-token-two.vercel.app/callback';
 
 var app = express();
 
