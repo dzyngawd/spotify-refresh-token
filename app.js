@@ -5,8 +5,8 @@ var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 // const { type } = require('os');
 
-var client_id = '463fc0969d9240fe8d9a987478380b76'; // Your client id
-var client_secret = 'aa0d8021beeb4fda9066b177d902c698'; // Your client secret
+var client_id = '801611958853477090a91b78836c4999'; // Your client id
+var client_secret = 'edefcc1cf4e24a1caa911374cf462750'; // Your client secret
 var redirect_uri = 'http://localhost:8888/callback';
 
 var app = express();
@@ -26,7 +26,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/login', function (req, res) {
   var state = generate_state(16);
-  var scope = 'playlist-read-private playlist-modify-public playlist-modify-private'; // Authorizations
+  var scope = 'user-read-currently-playing'; // Authorizations
   res.cookie("spotify_auth_state", state);
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
